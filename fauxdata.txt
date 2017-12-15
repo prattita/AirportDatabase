@@ -1,0 +1,135 @@
+﻿SQL basic data
+customer:
+INSERT INTO customer VALUES ('jsun39@hawk.iit.edu','Chandler');
+INSERT INTO customer VALUES ('prattita@hawk.iit.edu','Paolo');
+INSERT INTO customer VALUES ('ynguyen@hawk.iit.edu','Yen');
+
+addresses:
+INSERT INTO addresses VALUES ('ynguyen@hawk.iit.edu','3230 S Wells St','60616','USA','IL','Chicago');
+INSERT INTO addresses VALUES ('jsun39@hawk.iit.edu','3230 S Wells St','60616','USA','IL','Chicago');
+INSERT INTO addresses VALUES ('prattita@hawk.iit.edu','3366 Michigan Ave','60616','USA','IL','Chicago');
+INSERT INTO addresses VALUES ('prattita@hawk.iit.edu','3353 S State Street','60616','USA','IL','Chicago');
+INSERT INTO addresses VALUES ('ynguyen@hawk.iit.edu','3201 S State Street','60616','USA','IL','Chicago');
+INSERT INTO addresses VALUES ('jsun39@hawk.iit.edu','3201 S State Street','60616','USA','IL','Chicago');
+INSERT INTO addresses VALUES ('prattita@hawk.iit.edu','3201 S State Street','60616','USA','IL','Chicago');
+
+payment: 
+INSERT INTO payment VALUES ('2222','2021-10-05','MC','3230 S Wells St',60616,'USA','IL','Chicago','ynguyen@hawk.iit.edu');
+INSERT INTO payment VALUES ('1111','2019-10-05','VISA','3366 Michigan Ave',60616,'USA','IL','Chicago','prattita@hawk.iit.edu');
+INSERT INTO payment VALUES ('3333','2023-08-05','VISA','3230 S Wells St',60616,'USA','IL','Chicago','jsun39@hawk.iit.edu');
+INSERT INTO payment VALUES ('1122','2020-05-03','MC','3366 Michigan Ave',60616,'USA','IL','Chicago','prattita@hawk.iit.edu');
+INSERT INTO payment VALUES ('1133','2024-05-12','VISA','3366 Michigan Ave',60616,'USA','IL','Chicago','prattita@hawk.iit.edu');
+INSERT INTO payment VALUES ('1144','2030-01-14','VISA','3353 S State Street',60616,'USA','IL','Chicago','prattita@hawk.iit.edu');
+
+airport:
+
+INSERT INTO airport VALUES ('ORD','O''Hare International Airport','US','IL','Chicago');
+
+INSERT INTO airport VALUES ('SFO','San Francisco International Airport','US','CA','San Francisco');
+
+INSERT INTO airport VALUES ('DEN','Denver International Airport','US','CO','Denver');
+
+INSERT INTO airport VALUES ('SEA','Seattle-Tacoma International Airport','US','WA','Seattle');
+
+INSERT INTO airport VALUES ('LAX','Los Angeles International Airport','US','CA','Los Angeles');
+
+INSERT INTO airport VALUES ('PEK','Beijing Capital International Airport','China',NULL,'Beijing');
+
+INSERT INTO airport VALUES ('NRT','Narita International Airport','Japan',NULL,'Narita');
+
+INSERT INTO airport VALUES ('HND','Tokyo Haneda Airport','Japan',NULL,'Tokyo');
+
+INSERT INTO airport VALUES ('HKG','Hong Kong International Airport','Hong Kong',NULL,'Hong Kong');
+
+INSERT INTO airport VALUES ('DXB','Dubai International Airport','UAE',NULL,'Dubai');
+
+INSERT INTO airport VALUES ('SIN','Singapore Changi Airport','Singapore',NULL,'Singapore');
+
+
+
+Airlines:
+
+INSERT INTO airline VALUES ('QR','Qatar Airways','Qatar'),
+
+('SQ','Singapore Airlines','Singapore'),
+
+('NH','All Nippon Airways','Japan'),
+
+('EK','Emirates Airlines','UAE'),
+
+('CX','Cathay Pacific','Hong Kong'),
+
+('HU','Hainan Airlines','China'),
+
+('AA','American Airlines','US'),
+('UA','United Airlines','US')
+
+
+;
+
+
+INSERT INTO flight VALUES 
+('110','AA','0010','2017-12-10','2017-12-10 03:30:00','2017-12-10 08:30:00',2014,'ORD','LAX'),
+
+('111','AA','0011','2017-12-10','2017-12-10 15:22:00','2017-12-10 20:35:00',2014,'ORD','LAX'),
+
+('112','UA','0005','2017-12-10','2017-12-10 08:10:00','2017-12-10 13:15:00',2014,'ORD','LAX'),
+
+('113','UA','0006','2017-12-10','2017-12-10 20:40:00','2017-12-11 01:30:00',2014,'ORD','LAX'),
+
+('114','AA','0012','2017-12-10','2017-12-10 22:15:00','2017-12-11 03:15:00',2014,'ORD','LAX'),
+
+
+('120','AA','0013','2017-12-10','2017-12-10 23:00:00','2017-12-11 12:00:00',6248,'LAX','PEK'),
+
+('121','HU','0000','2017-12-10','2017-12-10 22:30:00','2017-12-11 11:30:00',6248,'LAX','PEK'),
+
+('122','HU','0001','2017-12-11','2017-12-11 10:10:00','2017-12-11 23:15:00',6248,'LAX','PEK'),
+('130','AA','0015','2017-12-10','2017-12-10 11:00:00','2017-12-10 15:45:00',1854,'ORD','SFO'),
+('131','UA','0016','2017-12-10','2017-12-10 17:00:00','2017-12-11 04:48:00',5180,'SFO','HND'),
+('132','NH','0017','2017-12-11','2017-12-11 10:00:00','2017-12-11 12:30:00',1212,'HND','PEK'),
+('140','AA','0100','2017-12-10','2017-12-10 05:00:00','2017-12-10 18:45:00',6585,'ORD','PEK'),
+('200','HU','0000','2018-02-05','2018-02-05 10:00:00','2018-02-06 00:30:00',6585,'PEK','ORD'),
+('201','HU','0001','2018-02-05','2018-02-05 15:00:00','2018-02-05 18:20:00',1299,'PEK','HND'),
+('202','HU','0002','2018-02-05','2018-02-05 20:00:00','2018-02-05 23:40:00',1299,'PEK','HND'),
+('300','NH','0000','2018-02-05','2018-02-05 23:30:00','2018-02-06 11:40:00',6296,'HND','ORD'),
+('301','NH','0001','2018-02-06','2018-02-06 08:30:00','2018-02-06 20:00:00',6296,'HND','ORD')
+
+INSERT INTO price VALUES (110,'Business',430,10),
+(110,'Economy',330,50),
+(111,'Business',480,12),
+(111,'Economy',380,100),
+(112,'Business',486,12),
+(112,'Economy',386,160),
+(113,'Business',456,8),
+(113,'Economy',356,60),
+(114,'Business',438,10),
+(114,'Economy',338,50),
+(120,'Business',1158,16),
+(120,'Economy',958,250),
+(121,'FirstClass',2889,10),
+(121,'Business',1589,20),
+(121,'Economy',889,200),
+(122,'FirstClass',2610,10),
+(122,'Business',1310,16),
+(122,'Economy',810,160),
+(130,'Business',461,20),
+(130,'Economy',361,170),
+(131,'Business',1547,20),
+(131,'Economy',1147,300),
+(132,'FirstClass',2046,10),
+(132,'Business',1578,16),
+(132,'Economy',999,200),
+(140,'Business',2143,24),
+(140,'Economy',1543,250),
+(200,'FirstClass',2179,12),
+(200,'Business',1779,20),
+(200,'Economy',1486,200),
+(201,'Business',1100,16),
+(201,'Economy',1000,200),
+(202,'Business',1150,12),
+(202,'Economy',980,250),
+(300,'Business',473,12),
+(300,'Economy',373,160),
+(301,'Business',438,12),
+(301,'Economy',338,150)

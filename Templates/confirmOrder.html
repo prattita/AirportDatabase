@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm your Order</title>
+</head>
+<body>
+    <form action="{{ url_for('booked') }}" method="post">
+        <h2>List of individual flights and the cost per class</h2>
+        {% for i in flightPriceList %}
+            <p>{{i}}</p>
+        {% endfor %}
+        <h4>Enter in the following format: flightId1,class1,flightId2,class2,.....</h4>
+        <input type="text" name="bookings" required>
+        <h2>Select a payment</h2>
+        {% for card in cardNums %}
+            <p>{{card}}</p>
+        {% endfor %}
+        <h4>Enter the number of one of your credit cards.</h4>
+        <input type="text" name="cardNum" required>
+        <input type="submit">
+    </form>
+</body>
+</html>

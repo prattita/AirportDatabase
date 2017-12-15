@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+    <h2>Here is the list of flights from {{fromAir}} to {{toAir}} for {{depDate}}</h2>
+    <h4>(FlightIds, Miles, Number of Connections, Length (in seconds), Price, Route)</h4>
+    <form action="{{ url_for('confirmOrder') }}" method="post">
+    {% for i in range(0,numFlights)%}
+            <p>{{allFlights[i]}}</p>
+            <p>Flight ids: {{flightIds[i]}}</p>
+            <!--<a href="{{ url_for('confirmOrder', flightId = flightIds[i])}}">Book!</a>-->
+    {% endfor %}
+    {% if retFlag %}
+        <h2>Here is the list of all return flights from {{toAir}} to {{fromAir}} for {{retDate}}</h2>
+        {% for j in range(0,numRetFlights)%}
+                <p>{{allRetFlights[j]}}</p>
+                <p>Return Flight Ids: {{retFlightIds[j]}}</p>
+                <!--<a href="{{ url_for('confirmOrder', flightId = flightIds[i])}}">Book!</a>-->
+        {% endfor %}
+    {% endif %}
+
+    <h3>Type in the flight ids and return flight ids you would like to book, separated by a comma</h3>
+    <input type="text" name="flightId" required>
+
+
+    <button type="submit" name="submit" value="add">Book</button>
+
+    </form>
+</body>
+</html>

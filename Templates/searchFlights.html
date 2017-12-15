@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Flight</title>
+</head>
+<body>
+    <form action="{{ url_for('listOfFlights') }}" method="post">
+        <h2>Departure airport</h2>
+        <select name="fromAir">
+        {% for IATA in IATAs %}
+            <option value={{IATA}}>{{IATA}}</option>
+        {% endfor %}
+        </select>
+
+        <h2>Departure date (yyyy-mm-dd)</h2>
+        <input type="text" name="depDate" required>
+
+        <h2>Destination airport</h2>
+        <select name="toAir">
+        {% for IATA in IATAs %}
+            <option value={{IATA}}>{{IATA}}</option>
+        {% endfor %}
+        </select>
+
+        <h2>Return date (yyyy-mm-dd)</h2>
+        <input type="text" name="retDate">
+
+        <h2>Max number of connections (integer)</h2>
+        <input type="text" name="maxCon">
+        <h2>Max length of the whole trip in days (integer)</h2>
+        <input type="text" name="maxLength">
+        <h2>Max Price (integer)</h2>
+        <input type="text" name="userPrice">
+
+        <h2>Sort by</h2>
+        <select name="sortBy">
+          <option value="Price (lowest first)">Price (lowest first)</option>
+
+          <option value="Flight length (lowest first)">Flight length (lowest first)</option>
+
+        </select>
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+    </head>
+    <body>
+        <form action="{{ url_for('loginSuccess') }}" method="post">
+            <input type="text" name="email">
+        <input type="submit">
+
+            <a href="{{ url_for('register') }}">SIGN UP!</a>
+    </form>
+    </body>
+</html>
